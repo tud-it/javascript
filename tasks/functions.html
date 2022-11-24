@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>functions</title>
+  </head>
+  <body>
+    <script>
+      function a() {
+        b();
+      }
+      function b() {
+        a();
+      }
+      a();
+    </script>
+    <h1>Defining and Calling functions:</h1>
+    <br>
+    <textarea name="" id="" cols="30" rows="10">
+
+      function a(){
+            					b();
+            				}
+            				function b(){
+            					a();
+            				}
+            				a();
+    </textarea>
+    <br>
+    <br>
+    <script>
+      function stundenlohnBerechnenAnzeigen() {
+        var wochenStunden = parseInt(document.querySelector("#stundenlohn_stunden").value);
+        var bruttoLohn = parseInt(document.querySelector("#stundenlohn_brutto").value);
+        var lohnWoche = (bruttoLohn * 3) / 13;
+        var stundenlohn = lohnWoche / wochenStunden;
+        alert("Stundenlohn: " + stundenlohn);
+      }
+    </script>
+		<label for="stunden">working hours:</label>
+    <input id="stundenlohn_stunden" type="text" value="40" name="stunden"/>
+		<label for="brutto">Brutto:</label>
+    <input id="stundenlohn_brutto" type="text" value="500" name="brutto"/>
+    <button onclick="stundenlohnBerechnenAnzeigen()">Berechnen</button>
+		<script>
+			function dynamicTyping()
+			{
+					var rohDatum = 42;
+					alert(typeof(rohDatum));
+					alert(rohDatum);
+					var zusatzDatum = "Answer: " + rohDatum;
+					alert(typeof(zusatzDatum));
+					alert(zusatzDatum);
+			}
+			</script>
+			<br>
+			<br>
+			<button onclick="dynamicTyping()">Test</button>
+			<br>
+			<br>
+			<script>
+				function dyntypBerechnen() {
+					var eleA = document.querySelector("#dyntyp_a");
+					var eleB = document.querySelector("#dyntyp_b");
+					var eleC = document.querySelector("#dyntyp_c");
+					alert(typeof eleA.value);
+					eleC.value = eleA.value * eleB.value;
+				}
+				</script>
+				<input id="dyntyp_a" type="text" value="2"  />
+				<input id="dyntyp_b"  type="text" value="8" />
+				=
+				<input id="dyntyp_c"  type="text" value="" />
+				<button onclick="dyntypBerechnen()">Berechnen</button>
+		<br>
+		<br>
+    <button onclick="location.href='./../index.html'">Home</button>
+  </body>
+</html>

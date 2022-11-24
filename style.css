@@ -1,0 +1,48 @@
+body {
+	width: 45%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5%;
+}
+h1{
+	white-space: nowrap;
+	text-align: center;
+}
+#pages {
+	font-size: 15pt;
+	border: 1px solid black;
+	width: 100%;
+}
+#pages th {
+	border-bottom: 1px solid black;
+	height: 40px;
+}
+.course{
+	width: 130px;
+}
+.description {
+	border-left: 1px solid black;
+	width: 100%;
+}
+#course{
+	width: 125px;
+	border-right: 1px solid black;
+}
+td{
+	border-bottom: 1px solid black;
+}
+button {
+	height: 50px;
+	width: 120px;
+}
+#content::-webkit-scrollbar {
+	display: none;
+}
+#content {
+	overflow: scroll;
+	height: 400px;
+}
+th {
+	text-align: left;
+}
+
