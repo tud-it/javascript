@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      iframe {
+        height: 600px;
+        width: 600px;
+        max-width: 800px;
+      }
+    </style>
+    <script>
+      var locations = ['https://www.wikipedia.org/', 'https://dditools.inf.tu-dresden.de/dev/struktog/index.html', 'https://floork.org/', 'https://de.wikipedia.org/wiki/Linux'];
+      var u = 0;
+      setInterval(function () {
+        var x = document.getElementById('slideshow');
+        x.setAttribute('src', locations[u]);
+        if (u < locations.length - 1) {
+          ++ u;
+        } else {
+          u = 0;
+        }
+        document.getElementById('link').innerText = x.src
+      }, 3000);
+      temp()
+    </script>
+    <title>Training 2</title>
+  </head>
+  <body>
+    <div id="transformation">
+      <iframe id="slideshow"></iframe>
+      <p id="link"></p>
+    </div>
+    <br>
+    <br>
+    <button onclick="location.href='./../index.html'">Home</button>
+  </body>
+</html>
