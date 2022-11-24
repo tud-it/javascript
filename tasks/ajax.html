@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX</title>
+  </head>
+  <body>
+    <h2>Example 1</h2>
+    <p>
+      var requestObj = new XMLHttpRequest();<br>
+      requestObj.open("GET", "http://example.com");<br>
+      requestObj.onreadystatechange = function(evtObj) {<br>
+      if(4 == evtObj.target.readyState)) {<br>
+      // Do something with the server reply<br>
+      }<br>
+      };<br>
+      requestObj.send();
+    </p>
+    <h2>Example 2</h2>
+    <textarea name="" id="" cols="100" rows="50">
+      <!DOCTYPE html>
+      <html>
+        <body>
+
+          <div id="demo">
+            <h1>The XMLHttpRequest Object</h1>
+            <button type="button" onclick="loadDoc()">Change Content</button>
+          </div>
+
+          <script>
+            function loadDoc() {
+              var xhttp = new XMLHttpRequest();
+              xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                  document.getElementById("demo").innerHTML = this.responseText;
+                }
+              };
+              xhttp.open("GET", "ajax_info.txt", true);
+              xhttp.send();
+            }
+          </script>
+        </body>
+				</html>
+			</textarea>
+			<br>
+			<a href="https://www.w3schools.com/xml/tryit.asp?filename=tryajax_first">source w3schools</a>
+    <br>
+		<br>
+    <button onclick="location.href='./../index.html'">Home</button>
+  </body>
+</html>

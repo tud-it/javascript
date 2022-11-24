@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-      button{
+      button {
         text-align: left;
       }
       table {
@@ -16,22 +16,22 @@
         border-bottom: 1px solid black;
         width: 5%;
       }
-      td{
+      td {
         padding-left: 5px;
         padding-right: 5px;
       }
-      #tab1 td{
+      #tab1 td {
         text-align: right;
         width: 6%;
       }
-      #tab2 td{
+      #tab2 td {
         text-align: left;
       }
-      tbody tr:nth-child(odd){
+      tbody tr:nth-child(odd) {
         background-color: #ddd;
         color: black;
       }
-      tbody tr:nth-child(even){
+      tbody tr:nth-child(even) {
         background-color: #bbb;
         color: black;
       }
@@ -39,7 +39,7 @@
     <title>Events</title>
   </head>
   <body>
-    <button onclick="location.href='./../index.html'" style="text-align: left;">Home</button>
+    <button onclick="location.href='./../index.html'" style="text-align: left;" id="home">Home</button>
     <br>
     <br>
     <table id="tab1">
@@ -355,6 +355,6 @@
       </tbody>
     </table>
     <br>
-    <button onclick="location.href='./../index.html'" style="text-align: left;">Home</button>
+    <a href="#home">go up</a>
   </body>
 </html>

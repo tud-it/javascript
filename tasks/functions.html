@@ -21,12 +21,12 @@
     <textarea name="" id="" cols="30" rows="10">
 
       function a(){
-            					b();
-            				}
-            				function b(){
-            					a();
-            				}
-            				a();
+                  					b();
+                  				}
+                  				function b(){
+                  					a();
+                  				}
+                  				a();
     </textarea>
     <br>
     <br>
@@ -39,43 +39,42 @@
         alert("Stundenlohn: " + stundenlohn);
       }
     </script>
-		<label for="stunden">working hours:</label>
+    <label for="stunden">working hours:</label>
     <input id="stundenlohn_stunden" type="text" value="40" name="stunden"/>
-		<label for="brutto">Brutto:</label>
+    <label for="brutto">Brutto:</label>
     <input id="stundenlohn_brutto" type="text" value="500" name="brutto"/>
     <button onclick="stundenlohnBerechnenAnzeigen()">Berechnen</button>
-		<script>
-			function dynamicTyping()
-			{
-					var rohDatum = 42;
-					alert(typeof(rohDatum));
-					alert(rohDatum);
-					var zusatzDatum = "Answer: " + rohDatum;
-					alert(typeof(zusatzDatum));
-					alert(zusatzDatum);
-			}
-			</script>
-			<br>
-			<br>
-			<button onclick="dynamicTyping()">Test</button>
-			<br>
-			<br>
-			<script>
-				function dyntypBerechnen() {
-					var eleA = document.querySelector("#dyntyp_a");
-					var eleB = document.querySelector("#dyntyp_b");
-					var eleC = document.querySelector("#dyntyp_c");
-					alert(typeof eleA.value);
-					eleC.value = eleA.value * eleB.value;
-				}
-				</script>
-				<input id="dyntyp_a" type="text" value="2"  />
-				<input id="dyntyp_b"  type="text" value="8" />
-				=
-				<input id="dyntyp_c"  type="text" value="" />
-				<button onclick="dyntypBerechnen()">Berechnen</button>
-		<br>
-		<br>
+    <script>
+      function dynamicTyping() {
+        var rohDatum = 42;
+        alert(typeof(rohDatum));
+        alert(rohDatum);
+        var zusatzDatum = "Answer: " + rohDatum;
+        alert(typeof(zusatzDatum));
+        alert(zusatzDatum);
+      }
+    </script>
+    <br>
+    <br>
+    <button onclick="dynamicTyping()">Test</button>
+    <br>
+    <br>
+    <script>
+      function dyntypBerechnen() {
+        var eleA = document.querySelector("#dyntyp_a");
+        var eleB = document.querySelector("#dyntyp_b");
+        var eleC = document.querySelector("#dyntyp_c");
+        alert(typeof eleA.value);
+        eleC.value = eleA.value * eleB.value;
+      }
+    </script>
+    <input id="dyntyp_a" type="text" value="2"/>
+    <input id="dyntyp_b" type="text" value="8"/>
+    =
+    <input id="dyntyp_c" type="text" value=""/>
+    <button onclick="dyntypBerechnen()">Berechnen</button>
+    <br>
+    <br>
     <button onclick="location.href='./../index.html'">Home</button>
   </body>
 </html>
