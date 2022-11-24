@@ -8,16 +8,20 @@
   </head>
   <body>
     <script>
-      function pop() {
+      function pop() { // part 1 of the exercise (only a popup)
         var inpu = parseInt(document.querySelector("#inp").value);
         alert(inpu);
       }
-      function opwin() {
+      function opwin() { // part 2 of the exercise (open the actual url)
         var op = document.querySelector("#inp").value;
-        window.open(op);
+        if (op.match(/^((https|http)?:\/\/)?[0-9a-zA-Z]+\.[-_0-9a-zA-Z]+\.[0-9a-zA-Z]+\/+$/)) { // part 3 of the exercise (with html simple validation via RegEx)
+          window.open(op);
+        } else {
+          alert("This is not a URL");
+        }
       }
     </script>
-    <input type="text" name="inp" id="inp" onkeyup="this.style.width = ((this.value.length + 1) * 8) + 'px';">
+    <input type="text" name="inp" id="inp" onkeyup="this.style.width = ((this.value.length + 1) * 8) + 'px';" placeholder="Please type a URL in here">
     <button name="btn" id="btn" onclick="opwin()">Button</button>
     <br>
     <br>
